@@ -1,0 +1,78 @@
+{
+  "data": {
+    "formschema": {
+      "code": "inspve",
+      "name": "Inspeccion de vehiculos",
+      "label": "Inspeccion de vehiculos",
+      "version": "1",
+      "sections": [
+        {
+          "name": "Información",
+          "label": "Carga de Información",
+          "code": "ci",
+          "fields": [
+            {
+              "name": "dominio",
+              "label": "Dominio",
+              "code": "dom",
+              "type": "select",
+              "events": [],
+              "mandatory": true,
+              "options": {
+                "type": "list",
+                "data": [
+                  "aa-001-ac",
+                  "aa-002-ac",
+                  "aa-003-ac",
+                  "aa-004-ac"
+                ]
+              },
+              "enabled": true,
+              "validate": []
+            }
+          ]
+        },
+        {
+          "name": "Seccion 2",
+          "label": "Seccion 2",
+          "code": "s2",
+          "fields": [
+            {
+              "name": "Luces",
+              "label": "Luces",
+              "code": "luc",
+              "type": "text",
+              "options": [],
+              "events": [],
+              "mandatory": true,
+              "enabled": true,
+              "validate": []
+            },
+            {
+              "name": "Estado",
+              "label": "Estado",
+              "code": "est",
+              "type": "checkbox",
+              "options": [],
+              "events": [],
+              "mandatory": true,
+              "enabled": true,
+              "validate": []
+            },
+            {
+              "name": "Foto",
+              "label": "Imagenes",
+              "code": "img1",
+              "type": "image",
+              "options": [],
+              "events": [],
+              "mandatory": true,
+              "enabled": true,
+              "validate": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

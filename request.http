@@ -1,0 +1,178 @@
+get http://localhost:8000/api/formschema
+
+################################
+post http://localhost:8000/api/formschema
+content-type: application/json
+
+{
+  "name":"VEHÍCULOS (AUTOS, CAMIONETAS, CAMIONES.)",
+  "code" : "inspvehiculo",
+  "label" : "Inspecciones de VEHÍCULOS (AUTOS, CAMIONETAS, CAMIONES.)",
+  "version" : "1"
+}
+
+################################
+post http://localhost:8000/api/formsection
+content-type: application/json
+
+{
+  "name":"PLANILLA DE CONTROL",
+  "code" : "PLANILLADECONTROL",
+  "label" : "PLANILLA DE CONTROL",
+  "order" : 1,
+  "formschema_id": 2
+}
+
+################################
+post http://localhost:8000/api/formgroup
+content-type: application/json
+
+{
+  "name":"Documentacion",
+  "code" : "docs",
+  "label" : "Documentacion",
+  "order" : 1,
+  "formsection_id": 1,
+  "version" : "1"
+}
+
+################################
+put http://18.117.197.128:8000/api/formfield/618
+content-type: application/json
+
+{
+"id": 618,
+"name": "x9fea6440f29914550ec286985a4ae2ff",
+"label": "Carnet de Conductor",
+"code": "x9fea6440f29914550ec286985a4ae2ff",
+"mandatory": true,
+"enabled": true,
+"validate": ".",
+"order": "69",
+"formgroup_id": 575,
+"formfieldtype_id": 6
+}
+
+
+################################
+post http://localhost:8000/api/formfieldtype
+content-type: application/json
+
+{
+  "name":"Texto",
+  "code" : "text"
+}
+
+################################
+post http://localhost:8000/api/formfieldtype
+content-type: application/json
+
+{
+  "name":"Select",
+  "code" : "select"
+}
+
+################################
+post http://localhost:8000/api/formfieldtype
+content-type: application/json
+
+{
+  "name":"Image",
+  "code" : "image"
+}
+
+################################
+post http://localhost:8000/api/formfieldtype
+content-type: application/json
+
+{
+  "name":"Checkbox",
+  "code" : "checkbox"
+}
+
+################################
+get http://18.117.197.128:8000/api/formfieldtype/8
+content-type: application/json
+
+{
+  
+  "name":"number",
+  "code" : "number"
+}
+
+################################
+post http://localhost:8000/api/formfieldevent
+content-type: application/json
+
+{
+  "name":"change()",
+  "event" : "f()",
+  "formfield_id": 1
+}
+
+################################
+post http://localhost:8000/api/formfieldoption
+content-type: application/json
+
+{
+  "name":"vehiculos",
+  "type" : "list",
+  "endpoint": ".",
+  "formfield_id": 1
+  
+}
+
+################################
+post http://localhost:8000/api/formfieldoptionitem
+content-type: application/json
+
+{
+  "code":"SC",
+  "value" : "Si corresponde",
+  "formfieldoption_id": 1 
+}
+
+###############################
+post http://localhost:8000/api/formvalue
+content-type: application/json
+
+{
+    "formschema_id": 1,
+    "date": "2021-10-14 02:08:09",
+    "user_id": 1,
+    "formfieldvalues" : [
+      {
+          "formfield_id": 1,
+          "value": "Valor"
+      },
+      {
+          "formfield_id": 2,
+          "value": "Valor 2"
+      }
+          ]
+      }
+###############################
+post http://localhost:8000/api/formfieldvalue
+content-type: application/json
+
+{
+    "formvalue_id": 1,
+    "formfield_id": 1,
+    "value": "Valor"
+}
+
+#######################################
+put http://18.117.197.128:8000/api/formfield/4
+content-type: application/json
+
+{
+  "name": "N° Patente4",
+"label": "N° Patente",
+"code": "N° Patente4",
+"mandatory": 1,
+"enabled": 1,
+"validate": ".",
+"order": "4",
+"formgroup_id": 1,
+"formfieldtype_id": 7,
+}
