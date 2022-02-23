@@ -27,7 +27,6 @@ class FormfieldResource extends JsonResource
             'formfieldtype_id' => $this->formfieldtype_id,
             'formfieldevents' => FormfieldeventCollection::make($this->whenLoaded('formfieldevents')),
             'formfieldoptions' => FormfieldoptionCollection::make($this->whenLoaded('formfieldoptions')),
-            'value' => ''
 
 
         ];

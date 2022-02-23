@@ -41,7 +41,7 @@ class FormschemaController extends Controller
     public function show(Request $request, Formschema $formschema)
     {
         $id = $formschema->id;
-        //Cargo los modelos
+        //Load all the models to build tree
         $localFormschema = Formschema::with([
             'formsections',
             'formsections.formgroups',
